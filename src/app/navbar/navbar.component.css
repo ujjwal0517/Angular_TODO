@@ -1,0 +1,22 @@
+
+.container ul li {
+    color:white;
+    list-style-type: none;
+}
+nav{
+   
+    margin:auto;
+    margin-top: 15px;
+    background-color: black;
+    width: 50%;
+    padding:5px
+}
+ul{
+    
+    display: flex;
+    justify-content: space-evenly;
+}
+nav ul li:hover{
+    color:yellow;
+    cursor: pointer;
+}
