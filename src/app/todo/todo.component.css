@@ -4,7 +4,7 @@
     margin-top: 20px;
     width: 50%;
 }
-input{
+.todos{
     width: 70%;
     border: none;
     background-color: black;
@@ -32,12 +32,43 @@ button:hover{
     width: 73%;
     height: auto;
     border: none;
-    background-color: black;
     color: white;
 }
-.list-todo{
+/* .list-todo{
     list-style-type: none;
     text-align: center;
     display: flex;
     justify-content: space-between;
+} */
+.wrapper{
+    margin: 5px;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: space-around;
+}
+.wrapper input[name="todo"]{
+    /* pointer-events: none; */
+    border: none;
+    background: rgba(0,0,0,0);
+    color:white;
+}
+.editClass{
+    border: 1px;
+    pointer-events: auto;
+}
+.successClass{
+    background-color: green;
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
+    width: 50%;
+    color: white;
+}
+.DangerClass{
+    background-color: red;
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
+    width: 50%;
+    color: white;
 }

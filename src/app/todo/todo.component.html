@@ -1,10 +1,23 @@
+<div [class]=messageClass>{{message}}</div>
 <div class="todo">
-    <input type="text" #myvalue placeholder="Enter Your Todos">
-    <button (click)="addTodo(myvalue.value)">>Add</button>
+    <input class="todos" type="text" #myvalue placeholder="Enter Your Todos" [value]="empty">
+    <button (click)="addTodo(myvalue.value)">Add</button>
 
     <div class="list" *ngIf="todoList">
-        <ul>
-            <li *ngFor="let todo of todoList; index as i" class="list-todo">{{todo}} <button style="background-color: white; color:red"(click)="onDelete(i)">Delete</button></li>
-        </ul>
+        <!-- <
+            <li *ngFor="let todo of todoList; index as i" class="list-todo">{{todo}} </li>
+        </ul> -->
+        <div class="wrapper" *ngFor="let todo of todoList;let i=index">
+            
+            <p #editvalue>{{todo}} </p>
+            <button  style="background-color: white; color:green" (click)="onEdit(i,editvalue)">Edit</button>
+            <button style="background-color: white; color:green"(click)="onDelete(i)">Delete</button>
+           
+        <div class="update" *ngIf="editValue && selected==i">
+            <input type="text" #updateData [value]="editValue">
+            <button  (click)="editGarne(i,updateData.value)">update</button>
+        </div>
+    </div>
+      
     </div>
 </div>
